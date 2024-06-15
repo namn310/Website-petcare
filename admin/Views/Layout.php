@@ -5,6 +5,8 @@
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <title>Admin-Petcare</title>
+    <link rel="shortcut icon" type="image/png" href="../images/logo/PetCARE.png">
+
     <link rel="stylesheet" href="../admin/Boostrap/css/bootstrap.css">
     <script href="/../Project-petcare-php/admin/Boostrap/js/bootstrap.bundle.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
@@ -37,6 +39,7 @@
             <a href="index.php" style="text-decoration: none;" class="logo d-flex align-items-center">
                 <img src="/../Project-petcare-php/assets/img/PetCARE.png" alt="">
                 <span class="d-none d-lg-block">Admin</span>
+
             </a>
             <i class="bi bi-list toggle-sidebar-btn"></i>
         </div><!-- End Logo -->
@@ -287,16 +290,16 @@
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="index.php?controller=danhmuc">
-                    <i class="fa-brands fa-product-hunt"></i><span>Quản lý danh mục</span>
+                    <i class="fa-solid fa-list"></i><span>Quản lý danh mục</span>
                 </a>
             </li>
 
-            <!-- <li class="nav-item">
+            <li class="nav-item">
                 <a class="nav-link" href="index.php?controller=dichvu">
                     <i class="fa-brands fa-servicestack"></i><span>Quản lý dịch vụ</span>
                 </a>
             </li>
-                    -->
+
 
             <li class="nav-item">
                 <a class="nav-link" href="index.php?controller=donhang">

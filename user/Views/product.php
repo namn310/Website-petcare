@@ -38,7 +38,7 @@ $conn = Connection::getInstance();
         </form>-->
       </nav>
 
-      <div class="product-list container d-flex align-items-start flex-wrap" number="">
+      <div class="product-list container d-flex justify-content-center align-items-center flex-wrap" number="">
         <?php
         $query = $conn->query("select * from product where id_danhmuc=$id_danhmuc");
         foreach ($data = $query->fetchAll() as $row) {

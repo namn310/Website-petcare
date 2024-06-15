@@ -23,6 +23,7 @@ trait loginModel
             header("location:index.php?controller=login");
         }
     }*/
+
         $email = $_POST["email"];
         $password = $_POST["password"];
         $password1 = md5($password);

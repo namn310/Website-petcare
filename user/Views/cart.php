@@ -1,6 +1,6 @@
 <?php
 $this->layoutPath = "LayoutTrangChu.php";
-$id = $_SESSION['customer_id'];
+$id = isset($_SESSION['customer_id']) ? $_SESSION['customer_id'] : 0;
 ?>
 <style>
   .img {
@@ -82,7 +82,7 @@ $id = $_SESSION['customer_id'];
       <h4 class="text-end">Tổng tiền thanh toán:
         <?php echo number_format($this->cartTotal()); ?>₫</h4> <br>
       <button class="btn btn-primary checkout">
-        <a style="text-decoration:none;color:white  " href="javascript:;">Thanh toán</a>
+        <a style="text-decoration:none;color:white  " href="index.php?controller=cart">Thanh toán</a>
       </button>
       <!-- <a href="index.php?controller=cart&action=checkout"  ></a> -->
       <!-- <div style="text-align: center;" class="total-cart">Hình thức thanh toán online</div>

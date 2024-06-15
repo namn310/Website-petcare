@@ -41,7 +41,7 @@ include "Model/DonhangModel.php";
                 $result = $conn->query("select id from orders");
                 echo $result->rowCount();
                 ?> đơn hàng</b></p>
-          <p class="info-tong">Tổng số khách hàng được quản lý.</p>
+          <p class="info-tong">Tổng số đơn hàng.</p>
         </div>
       </div>
       <div class="widget d-flex " style="min-width:200px;min-height:50px;background-color: #FFFFFF;padding:10px;border-radius:10px;box-shadow: 2px 2px 2px blue">

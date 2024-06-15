@@ -4,184 +4,89 @@ $this->layoutPath = "Layout.php";
 ?>
 
 <div class="pagetitle">
-  <h1>Danh Sách Dịch Vụ</h1>
-
-</div><!-- End Page Title -->
-
-<section class="section">
+  <h1>Quản lý dịch vụ</h1>
+  <!-- End Page Title -->
   <div class="row">
-    <div class="col-lg-12">
+    <div class="col-md-12">
+      <div class="tile">
+        <div class="tile-body">
 
-      <div class="card">
-        <div class="card-body">
+          <div class="button-function d-flex justify-content-between mt-3 mb-4" style="width:70%">
 
-          <!-- Table with stripped rows -->
-          <table class="table datatable">
+            <button id="uploadfile" class="btn btn-success" type="button" title="Nhập"><a id="addnhanvien" href="index.php?controller=dichvu&action=create"><i class="fas fa-plus"></i>>
+                Tạo mới dịch vụ</a></button>
+            <!--
+                                <button id="uploadfile" class="btn btn-secondary btn-sm nhap-tu-file" type="button"
+                                    title="Nhập" onclick="myFunction(this)"><i class="fas fa-file-upload"></i>>
+                                    Tải từ file</button>
+
+
+
+                                <a class="btn btn-primary btn-sm print-file" type="button" title="In"
+                                    onclick="myApp.printTable()"><i class="fas fa-print"></i> In dữ liệu</a>
+
+
+                                <a class="btn btn-warning btn-sm print-file js-textareacopybtn" type="button"
+                                    title="Sao chép"><i class="fas fa-copy"></i> Sao chép</a>
+
+
+
+                                <a class="btn btn-success btn-sm" href="" title="In"><i class="fas fa-file-excel"></i>
+                                    Xuất Excel</a>
+
+
+                                <a class="btn btn-danger btn-sm pdf-file" type="button" title="In"
+                                    onclick="myFunction(this)"><i class="fas fa-file-pdf"></i> Xuất PDF</a>
+ -->
+          </div>
+          <div class="search mt-4 mb-4 input-group" style="width:50%">
+            <button class="input-group-text btn btn-success"><i class="fa-solid fa-magnifying-glass"></i></button>
+            <input class="form-control" type="text" id="searchNV">
+          </div>
+
+
+
+          <table class="table table-hover table-bordered text-center" cellpadding="0" cellspacing="0" border="0" id="sampleTable">
             <thead>
-              <tr>
+
+              <tr class="table-primary">
+
                 <th>
-                  <b>M</b>ã dịch vụ
+                  ID danh mục
                 </th>
-                <th>Tên dịch vụ </th>
-                <th>Giá tiền</th>
-                <th>Chức năng</th>
+                <th>
+                  Tên dịch vụ
+                </th>
+                <th>
+                  Thời gian tạo
+                </th>
+                <th>
+                  Tính năng
+                </th>
               </tr>
             </thead>
-            <tbody>
-              <tr>
-                <td>000001</td>
-                <td>Gói tắm cơ bản cho chó</td>
-                <td>70.000đ - 250.000đ</td>
-                <td>
-                  <button class="btn btn-danger"><i class="bi bi-trash"></i></button>
-                  <button class="btn btn-warning"><i class="bi bi-pencil-square"></i></button>
-                </td>
-              </tr>
-              <tr>
-                <td>000002</td>
-                <td>Gói tắm cơ bản cho mèo</td>
-                <td>70.000đ - 250.000đ</td>
-                <td>
-                  <button class="btn btn-danger"><i class="bi bi-trash"></i></button>
-                  <button class="btn btn-warning"><i class="bi bi-pencil-square"></i></button>
-                </td>
-              </tr>
-              <tr>
-                <td>000003</td>
-                <td>Gói tắm combo cho chó</td>
-                <td>70.000đ - 250.000đ</td>
-                <td>
-                  <button class="btn btn-danger"><i class="bi bi-trash"></i></button>
-                  <button class="btn btn-warning"><i class="bi bi-pencil-square"></i></button>
-                </td>
-              </tr>
-              <tr>
-                <td>000004</td>
-                <td>Gói tắm combo cho mèo</td>
-                <td>70.000đ - 250.000đ</td>
-                <td>
-                  <button class="btn btn-danger"><i class="bi bi-trash"></i></button>
-                  <button class="btn btn-warning"><i class="bi bi-pencil-square"></i></button>
-                </td>
-              </tr>
-              <tr>
-                <td>000005</td>
-                <td>Gói cắt tỉa cơ bản cho chó</td>
-                <td>70.000đ - 250.000đ</td>
-                <td>
-                  <button class="btn btn-danger"><i class="bi bi-trash"></i></button>
-                  <button class="btn btn-warning"><i class="bi bi-pencil-square"></i></button>
-                </td>
-              </tr>
-              <tr>
-                <td>000006</td>
-                <td>Gói cắt tỉa cơ bản cho mèo</td>
-                <td>70.000đ - 250.000đ</td>
-                <td>
-                  <button class="btn btn-danger"><i class="bi bi-trash"></i></button>
-                  <button class="btn btn-warning"><i class="bi bi-pencil-square"></i></button>
-                </td>
-              </tr>
-              <tr>
-                <td>000008</td>
-                <td>Gói đẹp toàn diện cho chó</td>
-                <td>70.000đ - 250.000đ</td>
-                <td>
-                  <button class="btn btn-danger"><i class="bi bi-trash"></i></button>
-                  <button class="btn btn-warning"><i class="bi bi-pencil-square"></i></button>
-                </td>
-              </tr>
-              <tr>
-                <td>000009</td>
-                <td>Gói đẹp toàn diện cho mèo</td>
-                <td>70.000đ - 250.000đ</td>
-                <td>
-                  <button class="btn btn-danger"><i class="bi bi-trash"></i></button>
-                  <button class="btn btn-warning"><i class="bi bi-pencil-square"></i></button>
-                </td>
-              </tr>
-              <tr>
-                <td>000010</td>
-                <td>Gói sạch toàn thân cho chó</td>
-                <td>70.000đ - 250.000đ</td>
-                <td>
-                  <button class="btn btn-danger"><i class="bi bi-trash"></i></button>
-                  <button class="btn btn-warning"><i class="bi bi-pencil-square"></i></button>
-                </td>
-              </tr>
-              <tr>
-                <td>000011</td>
-                <td>Gói sạch toàn thân cho mèo</td>
-                <td>70.000đ - 250.000đ</td>
-                <td>
-                  <button class="btn btn-danger"><i class="bi bi-trash"></i></button>
-                  <button class="btn btn-warning"><i class="bi bi-pencil-square"></i></button>
-                </td>
-              </tr>
-              <tr>
-                <td>000012</td>
-                <td>Gói vệ sinh tai cho chó</td>
-                <td>70.000đ - 250.000đ</td>
-                <td>
-                  <button class="btn btn-danger"><i class="bi bi-trash"></i></button>
-                  <button class="btn btn-warning"><i class="bi bi-pencil-square"></i></button>
-                </td>
-              </tr>
-              <tr>
-                <td>000013</td>
-                <td>Gói vệ sinh tai cho mèo</td>
-                <td>70.000đ - 250.000đ</td>
-                <td>
-                  <button class="btn btn-danger"><i class="bi bi-trash"></i></button>
-                  <button class="btn btn-warning"><i class="bi bi-pencil-square"></i></button>
-                </td>
-              </tr>
-              <tr>
-                <td>000014</td>
-                <td>Gói triệt sản cho chó đực</td>
-                <td>70.000đ - 250.000đ</td>
-                <td>
-                  <button class="btn btn-danger"><i class="bi bi-trash"></i></button>
-                  <button class="btn btn-warning"><i class="bi bi-pencil-square"></i></button>
-                </td>
-              </tr>
-              <tr>
-                <td>000015</td>
-                <td>Gói triệt sản cho chó cái</td>
-                <td>70.000đ - 250.000đ</td>
-                <td>
-                  <button class="btn btn-danger"><i class="bi bi-trash"></i></button>
-                  <button class="btn btn-warning"><i class="bi bi-pencil-square"></i></button>
-                </td>
-              </tr>
-              <tr>
-                <td>000016</td>
-                <td>Gói triệt sản cho mèo cái</td>
-                <td>70.000đ - 250.000đ</td>
-                <td>
-                  <button class="btn btn-danger"><i class="bi bi-trash"></i></button>
-                  <button class="btn btn-warning"><i class="bi bi-pencil-square"></i></button>
-                </td>
-              </tr>
-              <tr>
-                <td>000017</td>
-                <td>Gói triệt sản cho mèo đực</td>
-                <td>70.000đ - 250.000đ</td>
-                <td>
-                  <button class="btn btn-danger"><i class="bi bi-trash"></i></button>
-                  <button class="btn btn-warning"><i class="bi bi-pencil-square"></i></button>
-                </td>
-
+            <tbody id="table-nv">
+              <?php
+              foreach ($data as $row) {
+              ?>
+                <tr>
+                  <td><?php echo $row->id_dichvu ?> </td>
+                  <td><?php echo $row->ten_dichvu ?></td>
+                  <td><?php echo $row->dateCreate ?></td>
+                  <td>
+                    <a href="index.php?controller=dichvu&action=delete&id=<?php echo $row->id_dichvu ?>"> <button class="btn btn-danger">X</button></a>
+                    <a href="index.php?controller=dichvu&action=change&id=<?php echo $row->id_dichvu ?>"> <button class="btn btn-success"><i class="fas fa-edit"></i></button></a>
+                    <a href="index.php?controller=dichvu&action=detail&id=<?php echo $row->id_dichvu ?>"><button class="btn btn-primary">Xem</button></a>
+                  </td>
+                </tr>
+              <?php } ?>
             </tbody>
           </table>
-          <!-- End Table with stripped rows -->
-
         </div>
       </div>
-
     </div>
   </div>
-</section>
+</div>
 
 
 <!-- ======= Footer ======= -->

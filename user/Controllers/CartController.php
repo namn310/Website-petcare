@@ -65,5 +65,4 @@ class CartController extends Controller
             header("location:index.php?controller=checkout&id=$id");
         }
     }
-  
 }

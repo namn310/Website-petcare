@@ -105,7 +105,7 @@ $this->layoutPath = "Layout.php";
 <!--
   MODAL
 -->
-<div class="modal fade" id="ModalUP" tabindex="-1" aria-hidden="true" data-bs-backdrop="static" data-keyboard="false">
+<div class="modal fade" id="sModalUP" tabindex="-1" aria-hidden="true" data-bs-backdrop="static" data-keyboard="false">
     <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content">
             <div class="modal-header">

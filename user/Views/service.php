@@ -9,32 +9,20 @@ $this->layoutPath = ("LayoutTrangChu.php");
 </div>
 
 <!-- Dịch vụ-->
-<div class=" service container text-center mt-3 pdt">
-  <h2>DỊCH VỤ SPA-GROOMING</h2>
-  <i class="fa-solid fa-heart"></i>
-  <h4>Bảng giá dịch vụ</h4>
-  <img class="img-fluid" src="../Project-petcare-php/images/product/spa_cost.webp">
-  <button type="button" class="btn btn-danger mt-3"><a style="text-decoration: none;color:white" href="booking.html">Đăng ký ngay</a></button>
-</div>
-<br>
-<hr>
-<div class=" service container text-center mt-3">
-  <h2>DỊCH VỤ KHÁCH SẠN</h2>
-  <i class="fa-solid fa-heart"></i>
-  <h4>Bảng giá dịch vụ khách sạn</h4>
-  <img class="img-fluid" src="../Project-petcare-php/images/product/hotel pet.jpg">
+<?php foreach ($data as $row) {
 
-  <button type="button" class="btn btn-danger mt-3"><a style="text-decoration: none;color:white" href="booking.html">Đăng ký ngay</a></button>
-</div>
-<br>
-<hr>
-<div class=" service container text-center mt-3">
-  <h2>DỊCH VỤ KHÁC</h2>
-  <i class="fa-solid fa-heart"></i>
-  <h4>Bảng giá dịch vụ</h4>
-  <img class="img-fluid" src="../Project-petcare-php/images/product/otherservice.jpg">
-  <button type="button" class="btn btn-danger mt-3"><a style="text-decoration: none;color:white" href="booking.html">Đăng ký ngay</a></button>
-</div>
+?>
+  <div class=" service container text-center mt-3 pdt">
+    <h2><?php echo $row->ten_dichvu ?></h2>
+    <i class="fa-solid fa-heart"></i>
+    <h4>Bảng giá dịch vụ</h4>
+    <img class="img-fluid" src="../Project-petcare-php/assets/img-dichvu/<?php echo $row->hinhanh ?>">
+    <button type="button" class="btn btn-danger mt-3"><a style="text-decoration: none;color:white" href="index.php?controller=book">Đăng ký ngay</a></button>
+  </div>
+  <br>
+  <hr>
+<?php } ?>
+
 <!--hẾT DỊCH VỤ-->
 
 
